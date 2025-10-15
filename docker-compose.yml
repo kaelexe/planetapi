@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  planet-mysql:
+    image: mysql:8
+    container_name: planet-mysql
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - planet-data:/var/lib/mysql
+
+  planet-api:
+    build: .
+    container_name: planet-api
+    depends_on:
+      - planet-mysql
+    env_file: .env
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    command: ["dotnet", "PlanetApi.dll"]
+
+volumes:
+  planet-data:

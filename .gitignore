@@ -1,0 +1,40 @@
+# Build outputs
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+logs/
+log/
+
+# Environment and secrets
+.env
+appsettings.Development.json
+
+# Docker volumes and overrides
+planet-mysql-data/
+**/docker-compose.override.yml
+
+# IDE / Editor configs
+.vscode/
+.idea/
+
+# Packages and cache
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# System files
+Thumbs.db
+.DS_Store
+
+# Published output
+/app/
