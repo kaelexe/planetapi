@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace planetapi.Migrations;
 
 /// <inheritdoc />
-public partial class CreateTaskTable : Migration
+public partial class CreateTasksTable : Migration
 {
     /// <inheritdoc />
     protected override void Up(MigrationBuilder migrationBuilder)

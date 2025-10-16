@@ -11,8 +11,8 @@ using PlanetApi.Data;
 namespace planetapi.Migrations
 {
     [DbContext(typeof(PlanetContext))]
-    [Migration("20251015221739_CreateTaskTable")]
-    partial class CreateTaskTable
+    [Migration("20251015221739_CreateTasksTable")]
+    partial class CreateTasksTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
