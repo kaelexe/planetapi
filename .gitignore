@@ -38,3 +38,6 @@ Thumbs.db
 
 # Published output
 /app/
+
+# http
+/requests/local/

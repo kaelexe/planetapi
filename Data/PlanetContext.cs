@@ -1,7 +1,7 @@
+using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using PlanetApi.Models;
-using DotNetEnv;
 
 namespace PlanetApi.Data;
 

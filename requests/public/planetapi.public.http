@@ -1,0 +1,28 @@
+@planetapi_HostAddress = http://localhost:5000
+
+@contentType = application/json
+
+# Common Headers
+@headers = Content-Type: {{contentType}}
+
+### Get tasks
+GET {{planetapi_HostAddress}}/api/tasks/
+Accept: {{contentType}}
+{{headers}}
+
+### Get task by task id
+# api/tasks/{taskId}
+GET {{planetapi_HostAddress}}/api/tasks/1
+Accept: {{contentType}}
+{{headers}}
+
+### Create a new task
+POST {{planetapi_HostAddress}}/api/tasks/
+Accept: {{contentType}}
+{{headers}}
+
+{
+  "title": "New task",
+  "description": "Description new task",
+  "isComplete": false
+}

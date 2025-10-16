@@ -1,6 +1,6 @@
+using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
 using PlanetApi.Data;
-using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
